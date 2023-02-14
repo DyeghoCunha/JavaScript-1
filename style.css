@@ -47,7 +47,7 @@
 
 /* AQUI COMECA O FOOTER E O FUNDO */
 .corpoDaPagina{
-    overflow:hidden;
+    overflow-x:hidden;
     height: 100vh;
     width: 100vw;
     background-color: var(--corFundo);
@@ -58,6 +58,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+    overflow-x:hidden;
 
 }
 
@@ -82,12 +83,14 @@
     color: rgba(255,255,255,0.6);
     padding: .5em;
     font-size: 1em;
+    overflow-x:hidden;
     
 
 }
 
 .containerGlass{
 
+    overflow-x:hidden;
     position: absolute;
     width: 100vw;
     height: 100vh;
