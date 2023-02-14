@@ -6,19 +6,27 @@
 }
 
 :root{
-    /* --corA: #ff4f8b; */
-    /* --corB: #fffd87;
-    --corC: #00d2ff; */
+    --corA: #ff4f8b; 
+     --corB: #fffd87;
+    --corC: #00d2ff;
+    --corFundo: rgb(243, 118, 243);
 
-    /* --corFundo: rgb(243, 118, 243);
-    --corA: #f380a7e0;
+    /* --corA: #f380a7e0;
     --corB: #fffd87;
-    --corC: #ff8800; */
-
-    --corFundo: rgb(12, 8, 25);
-    --corA: #22079ce0;
+    --corC: #ff8800; 
+     --corFundo: rgb(12, 8, 25); */
+    
+    /* --corA: #22079ce0;
     --corB: #5055eb;
-    --corC: #04587f;
+    --corC: #04587f; */
+
+    /* --corA: #054043; 
+    --corB: #34748e;
+    --corC: #bdd1d3;
+
+    --corFundo: #030a24ad;  */
+
+    --blurFundo: 100px;
 
     /* --corA: black;
     --corB: black;
@@ -39,20 +47,33 @@
 
 
 
-
-
-
-
-
-
 /* AQUI COMECA O FOOTER E O FUNDO */
 .corpoDaPagina{
     overflow-x:hidden;
     height: 100vh;
     width: 100vw;
-    background-color: var(--corFundo);
+    /* background-image: url(./fundo2.png); */
+    
+    
+      background-color: var(--corFundo);
+    
+    
     
 }
+/* .fundo{
+            position: fixed; 
+			right: 0; 
+			bottom: 0;
+			min-width: 100%; 
+			min-height: 100%;
+			width: auto; 
+			height: auto; 
+			z-index: -1000;
+			background: url(images/torre.jpg) no-repeat;
+			background-size: cover; } */
+
+
+
 .meusBotoesDeContato{
     display: flex;
     flex-direction: column;
@@ -75,7 +96,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.2) ;
     border-radius: 10px;
     background: var(--fundoVidro);
-    backdrop-filter: blur(150px);
+    backdrop-filter: blur(10px);
     z-index: 1;
     box-shadow: 0 5px 45px rgba(0,0, 0, 0.1);
     text-decoration: none;
@@ -115,30 +136,31 @@
 
 .containerGlass .color{
     position: absolute;
-    filter: blur(200px);
+    filter: blur(var(--blurFundo));
 }
 .containerGlass .color:nth-child(1){
-    top: 0;
+    display: none;
+    top:0;
     background: var(--corA);
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    height: 40%;
 }
 
 .containerGlass .color:nth-child(2){
 
     bottom: -150px;
-    left: 100px;
+    left: 10%;
     background: var(--corB);
-    width: 500px;
-    height: 500px;
+    width: 90%;
+    height: 55%;
 }
 .containerGlass .color:nth-child(3){
 
     bottom: -50px;
     right: 0;
     background: var(--corC);
-    width: 300px;
-    height: 300px;
+    width: 60%;
+    height: 35%;
 }
 
 .containerGlass__lista{
