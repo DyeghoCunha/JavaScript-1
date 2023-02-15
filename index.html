@@ -21,12 +21,69 @@
 
             <section class="javaScript">
                 <script>
-                    document.write("Testando o meu perfil");
-                    document.write("<br>")
+
+                    var altura ;
+                    var peso ;
+
+                    var alturaEu = 2;
+                    var alturaLu =1.67;
+
+                    var pesoEu = 95;
+                    var pesoLu = 67;
+                    
+                    
+                    function mostra(escrito){
+
+                        document.write(escrito)
+                        document.write("<br>")
+                    }
+
+                    function calculaImc(peso,altura){
+                        var  imc = peso / (altura*altura);
+                       
+                        if(imc < 20)
+                        {
+                            mostra("Você esta abaixo do peso!");
+                        } 
+                        else if(imc >20 && imc <= 25)
+                        {
+                            mostra("Peso Ideal");
+                        }
+                        else if(imc >25 && imc <= 30)
+                        {
+                            mostra("Sobrepeso");
+                        }
+                        else if(imc >30 && imc <= 35)
+                        {
+                            mostra("Obesidade Moderada");
+                        }
+                        else if(imc >35 && imc <= 40)
+                        {
+                            mostra("Obesidade Severa");
+                        }
+                        else if(imc >40 && imc <= 50)
+                        {
+                            mostra("Obesidade Morbida");
+                        }
+                        else
+                        {
+                            mostra('Gordo');
+                        }
+    	
+                        
+
+                        mostra("Seu IMC é " + Math.round(imc) +".<br>");                     
+                    }
+
+                    calculaImc(pesoEu,alturaEu);
+                    calculaImc(pesoLu,alturaLu);
+                    
+                    
+            
                 </script>
 
             </section>
-
+                    
             <section class="containerGlass">
                 <div class="color"></div>
                 <div class="color"></div>
@@ -47,7 +104,7 @@
             </section>
             
         </main>
-
+        <script src="./java.js"></script>
 </body>
 
 
